@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+
+// components
+import Card from './components/Card'
+
+const square5 = [
+  { url: '/', icon: '', color: 'red'},
+  { url: '/', icon: '', color: 'orange'},
+  { url: '/', icon: '', color: 'yellow'},
+  { url: '/', icon: ''},
+  { url: '/', icon: '', color: 'blue'}
+]
+
+const square1 = [
+  { url: '../assets/flop-disk.png', label: 'save', color: 'yellow'}
+]
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Card
+        color={{front: '#eee', back: '#ccc'}}
+        // flipVel={'fast'}
+        title={'myFlip'}
+        preview={'Very shor preview'}
+        squareAmount={square1}
+      />
     </div>
-  );
+  )
 }
 
 export default App;
+
+/*### DEFAULTS                                | ### OPIONS & INDICATIONS
+                                              |
+  color={{front: '#eee', back: '#ccc'}}       | optional
+  flipVel={'average'}                         | slower, slow, average, fast, faster
+  title={'title'}                             | requested
+  preview={'preview'}                         | optional
+  squares={{url:'/', icon:'', color:'blue'}}  | requested (max 5)
+    default -> color: 'white'                 |
+  
+
+
+  */

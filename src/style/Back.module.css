@@ -1,0 +1,37 @@
+.disposition {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    width: 100%;
+    height: 54px;
+    background-color: #fff;
+
+    color: #000;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 0.3em;
+    text-decoration: dotted;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 100%;
+    height: 252px;
+}
+
+.square_group {
+    width: 100%;
+    height: 54px;
+
+    display: flex;
+}
